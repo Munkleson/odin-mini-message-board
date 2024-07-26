@@ -1,3 +1,14 @@
 <body>
-    
+    <button onclick="window.location.href='/new';">Click me</button>
+    <br>
+    <ul>
+        <% messages.forEach((messages) => { %>
+            <li>
+                <h2>From: <%= messages.user %> </h2>
+                <p><%= messages.text %></p>
+                <p>Added: <%= messages.added %></p>
+            </li>
+            <hr />
+        <% }) %>
+        </ul>
 </body>

@@ -1,20 +1,33 @@
 const messages = [
-    {
-      text: "Hi there!",
-      user: "Amando",
-      added: new Date()
-    },
-    {
-      text: "Hello World!",
-      user: "Charles",
-      added: new Date()
-    }
+    // {
+    //   text: "Hi there!",
+    //   user: "Amando",
+    //   added: new Date()
+    // },
+    // {
+    //   text: "Hello World!",
+    //   user: "Charles",
+    //   added: new Date()
+    // }
   ];
 
 const { Router } = require('express');
 
-const indexRouter = Router();
+const router = Router();
 
-indexRouter.get('/', (req, res) => res.send("hello"));
+router.get('/', (req, res) => res.render('pages/index', {messages: messages}));
+// router.get('/new', (req, res) => res.render('pages/new'));
 
-module.exports = indexRouter;
+// router.get('/new', (req, res) => {
+//   res.render('form');
+// });
+
+router.post('/new', (req, res) => {
+  const messageText = req.body.content;
+  const messageUser = req.body.author;
+
+  {messages.unshift({ text: messageText, user: messageUser, added: new Date() });}
+  res.redirect('/');
+});
+
+module.exports = router;
