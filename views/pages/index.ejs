@@ -1,14 +1,26 @@
+<%- include('../partials/head') %>
+
 <body>
-    <button onclick="window.location.href='/new';">Click me</button>
-    <br>
-    <ul>
-        <% messages.forEach((messages) => { %>
-            <li>
-                <h2>From: <%= messages.user %> </h2>
-                <p><%= messages.text %></p>
-                <p>Added: <%= messages.added %></p>
-            </li>
-            <hr />
-        <% }) %>
-        </ul>
+    <header class="header"></header>
+    <div class="subBodyContainer">
+        <button onclick="window.location.href='/new';">Click me</button>
+        <br>
+        <div class="mainContainerDiv">
+        <!-- <ul> -->
+            <% messages.forEach((messages) => { %>
+                <div class="messageDiv" style="background-image: url('<%= messages.backgroundImageArray %>')">
+                    <h2 class="<%= messages.fromTextColor %>">From: <%= messages.user %> </h2>
+                    <p class="messageText <%= messages.lightnessCheck %> <%= messages.messageTextColor %>"><%= messages.text %></p>
+                    <p>Added: <%= messages.added %></p>
+                </div>
+                <!-- <hr /> -->
+            <% }) %>
+            <!-- </ul> -->
+        </div>
+    </div>
+
 </body>
+<script src="../dummy.js"></script>
+
+
+<%- include('../partials/footer') %>
