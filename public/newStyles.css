@@ -1,29 +1,130 @@
 
+h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+::placeholder {
+    text-align: center;
+}
+
+.mainContainer {
+    /* width: 100vw; */
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+}
+
+.inputFormContainer {
+    width: 50%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formDiv {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newAuthor {
+    width: 300px;
+    height: 25px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: solid 1px black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.newAuthor:focus {
+    outline: none;
+}
+
+.newMessageDiv {
+    resize: none;
+    /* resize: both;
+    overflow: hidden; */
+    width: 300px;
+    height: 200px;
+    /* box-sizing: border-box; */
+    border-radius: 5px;
+}
+
+.newMessage {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: solid 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.newMessage:focus {
+    outline: none;
+}
+
+.newSubmitButton {
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: solid 1px black;
+    height: 25px;
+    background-color: rgb(221, 216, 216);
+    transition: 0.2s;
+}
+
+.newSubmitButton:hover{
+    cursor: pointer;
+    background-color: rgb(189, 185, 185);
+    transition: 0.3s;
+}
+
+.newSubmitButton:active {
+    box-shadow: 0 4px #666;
+    transform: translateY(5px);
+}
+
+.newSubmitButton:focus{
+    outline: none;
+}
 
 
 .pictureSelectDiv {
-    width: 100vw;
-    height: 500px;
+    width: 75vw;
+    /* height: 500px; */
+    margin-top: 50px;
 }
-
 
 .smallPicture {
     width: 70px;
     height: 70px;
     background-size: 100%;
     background-repeat: no-repeat;
-    margin: 5px;
+    margin: 15px;
     /* border: solid 5px rgba(0,0,0,0); */
     /* box-sizing: content-box; */
     /* box-sizing: border-box; */
     border: none;
+    transition: 0.3s;
+}
+
+.smallPicture:hover {
+    cursor: pointer;
 }
 
 .smallPicture:focus {
-    border: solid red;
+    /* border: solid red; */
     /* box-sizing: border-box; */
     /* margin-top: 0px; */
+    transition: 0.3s;
+    transform: scale(1.4, 1.4);
 }
 
 
@@ -34,4 +135,5 @@
 .notSelected {
     
 }
+
 

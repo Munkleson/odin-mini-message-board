@@ -14,22 +14,27 @@
     </div>
 </header>
 <body>
-    <div class="subBodyContainer">
-        <h2>Is there something you would like to say to a special someone? Would you like to confess your sins? How about just letting loose on some of the frustrations you have had over your whole life? Just let it all out!!!</h2>
-        <form method="POST" action="/new">
-            <input type="text" name="author" placeholder="Your name"><br>
-            <input type="text" name="content" placeholder="Your message"><br>
-            <button name="clickButton">Click me</button>
-        </form>
-    </div>
-    <button class="testButton">Test button</button>
+    <div class="mainContainer">
+        <div class="inputFormContainer">
+            <h2>Is there something you would like to say to a special someone? Would you like to confess your sins? How about just letting loose on some of the frustrations you have had over your whole life? Just let it all out!!!</h2>
+            <form method="POST" action="/new" class="formDiv">
+                <input type="text" name="author" placeholder="How do you want to be seen as?" class="newAuthor"><br>
+                <div class="newMessageDiv">
+                    <textarea type="text" name="content" placeholder="What would you like to say in your message? &#10; &#10; - No swearing please &#10; - Avoid using real names &#10; - Please do not spam (1 message per person) &#10; &#10; And remember, it doesn't have to be serious!! Life is more fun when you are sometimes silly 😄" class="newMessage"></textarea><br>
+                </div>
 
-    <div class="pictureSelectDiv">
-        <% backgroundImage.forEach(element => { %>
-            <button class="smallPicture" style="background-image: url('<%= element %>')"></button>
-
-        <% }) %>
+                <button name="clickButton" class="newSubmitButton">Post it!</button>
+            </form>
+        </div>
+        <div class="pictureSelectDiv">
+            <% backgroundImage.forEach(element => { %>
+                <button class="smallPicture" style="background-image: url('<%= element %>')"></button>
+    
+            <% }) %>
+        </div>
     </div>
+
+
 
 <script src="../newFunctions.js"></script>
 </body>
