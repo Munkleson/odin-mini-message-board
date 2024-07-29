@@ -1,0 +1,37 @@
+
+
+
+
+.pictureSelectDiv {
+    width: 100vw;
+    height: 500px;
+}
+
+
+.smallPicture {
+    width: 70px;
+    height: 70px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 5px;
+    /* border: solid 5px rgba(0,0,0,0); */
+    /* box-sizing: content-box; */
+    /* box-sizing: border-box; */
+    border: none;
+}
+
+.smallPicture:focus {
+    border: solid red;
+    /* box-sizing: border-box; */
+    /* margin-top: 0px; */
+}
+
+
+.selected {
+
+}
+
+.notSelected {
+    
+}
+

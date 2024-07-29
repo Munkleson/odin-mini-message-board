@@ -1,11 +1,39 @@
 <%- include('../partials/head') %>
+<head>
+    <link rel="stylesheet" href="newStyles.css">
+</head>
 
-<p>Is there something you would like to say to a special someone? Would you like to confess your sins? How about just letting loose on some of the frustrations you have had over your whole life? Just let it all out!!!</p>
+
+<header class="header">
+    <h1 class="pacifico-regular">Is there something you want to say?</h1>
+    <div class="headerButtonContainer">
+        <button onclick="window.location.href='/';" class="writeMessageButton">
+            <p class="writeButtonText">Back to the Home Page</p>
+        </button>
+        <!-- <button>About</button> -->
+    </div>
+</header>
+<body>
+    <div class="subBodyContainer">
+        <h2>Is there something you would like to say to a special someone? Would you like to confess your sins? How about just letting loose on some of the frustrations you have had over your whole life? Just let it all out!!!</h2>
+        <form method="POST" action="/new">
+            <input type="text" name="author" placeholder="Your name"><br>
+            <input type="text" name="content" placeholder="Your message"><br>
+            <button name="clickButton">Click me</button>
+        </form>
+    </div>
+    <button class="testButton">Test button</button>
+
+    <div class="pictureSelectDiv">
+        <% backgroundImage.forEach(element => { %>
+            <button class="smallPicture" style="background-image: url('<%= element %>')"></button>
+
+        <% }) %>
+    </div>
+
+<script src="../newFunctions.js"></script>
+</body>
 
 
-<form method="POST" action="/new">
-    <input type="text" name="author" placeholder="Your name"><br>
-    <input type="text" name="content" placeholder="Your message"><br>
-    <button name="clickButton">Click me</button>
-</form>
+
 <%- include('../partials/footer') %>
