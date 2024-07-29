@@ -29,7 +29,7 @@ const { Router } = require('express');
 
 const router = Router();
 
-router.get('/', (req, res) => res.render('pages/index', {messages: messages, title: "A love message"}));
+router.get('/', (req, res) => res.render('pages/index', {messages: messages, title: "Leave nothing unsaid"}));
 // router.get('/new', (req, res) => res.render('pages/new'));
 
 // router.get('/new', (req, res) => {

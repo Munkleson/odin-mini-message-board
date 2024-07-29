@@ -1,17 +1,30 @@
 <%- include('../partials/head') %>
 
 <body>
-    <header class="header"></header>
+    <header class="header">
+        <h1>Leave nothing unsaid</h1>
+        <div class="headerButtonContainer">
+            <button onclick="window.location.href='/new';" class="writeMessageButton">
+                <p class="writeButtonText">Write your own message 🖊️</p>
+            </button>
+            <!-- <button>About</button> -->
+        </div>
+    </header>
+
     <div class="subBodyContainer">
-        <button onclick="window.location.href='/new';">Click me</button>
         <br>
         <div class="mainContainerDiv">
         <!-- <ul> -->
             <% messages.forEach((messages) => { %>
-                <div class="messageDiv" style="background-image: url('<%= messages.backgroundImageArray %>')">
-                    <h2 class="<%= messages.fromTextColor %>">From: <%= messages.user %> </h2>
-                    <p class="messageText <%= messages.lightnessCheck %> <%= messages.messageTextColor %>"><%= messages.text %></p>
-                    <p>Added: <%= messages.added %></p>
+                <div class="messageDiv" >
+                    <div class="messageBackgroundDiv" style="background-image: url('<%= messages.backgroundImageArray %>')"></div>
+                    <div class="messageContentDiv">
+                        <h2 class="<%= messages.fromTextColor %>">From: <%= messages.user %> </h2>
+                        <div class="messageTextContainer <%= messages.lightnessCheck %>">
+                            <p class="messageText <%= messages.messageTextColor %>"><%= messages.text %></p>
+                        </div>
+                        <p>Added: <%= messages.added %></p>
+                    </div>
                 </div>
                 <!-- <hr /> -->
             <% }) %>
