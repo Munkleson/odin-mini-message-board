@@ -47,7 +47,7 @@ router.post('/new', (req, res) => {
   let fromTextColor;
   let messageTextColor;
 
-  if (lightBackgroundImageArray.includes(backgroundImage)){
+  if (lightBackgroundImageArray.includes(backgroundImage)){ /// All useless now, since I refactored the styling to all use the white backdrop and black text, but good to keep here just in case I may need it one day
     lightnessCheck = "lightBackgroundTextDiv";
     fromTextColor = "lightFromTextColor";
     messageTextColor = "lightMessageTextColor";
