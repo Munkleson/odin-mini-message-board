@@ -18,8 +18,4 @@ app.use('/', indexRouter);
 app.use(express.urlencoded({ extended: true }));
 
 
-
-
- 
-
 app.listen(port, () => { console.log(`Now listening on port: ${port}`) });

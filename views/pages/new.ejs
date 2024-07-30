@@ -20,7 +20,7 @@
             <form method="POST" action="/new" class="formDiv" id="newMessageForm">
                 <input type="text" name="author" placeholder="Your name/alias" class="newAuthor" maxlength="20" required><br>
                 <div class="newMessageDiv">
-                    <textarea type="text" name="content" placeholder="What would you like to say in your message? &#10; &#10; - No swearing please &#10; - Avoid using identifying information &#10; - Please do not spam (1 message per person) &#10; &#10; And remember, it doesn't have to be serious!! Life is more fun when you are sometimes silly 😄" class="newMessage" required></textarea><br>
+                    <textarea type="text" name="content" placeholder="What would you like to say in your message? &#10; &#10; - No swearing please &#10; - Avoid using identifying information &#10; - Please do not spam (1 message per person) &#10; &#10; And remember, it doesn't have to be serious!! Life is more fun when you are sometimes silly 😄" class="newMessage" maxlength="350" required></textarea><br>
                 </div>
 
                 <button name="clickButton" class="newSubmitButton">Post it!</button>

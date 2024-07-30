@@ -1,6 +1,7 @@
 <%- include('../partials/head') %>
 
 <body>
+    <div class="topRelative"></div>
     <header class="header">
         <h1 class="pacifico-regular indexH1Text">Leave nothing unsaid</h1>
         <div class="headerButtonContainer">
@@ -16,7 +17,7 @@
         <div class="mainContainerDiv">
         <!-- <ul> -->
             <% messages.forEach((messages) => { %>
-                <div class="messageDiv" >
+                <button class="messageDiv messageDivStatic">
                     <div class="messageBackgroundDiv" style="background-image: url('<%= messages.backgroundImageArray %>')"></div>
                     <div class="messageContentDiv">
                         <h2 class="<%= messages.fromTextColor %> lightFromBackdrop authorText">From: <%= messages.user %> </h2>
@@ -25,7 +26,7 @@
                         </div>
                         <!-- <p>Added: <%= messages.added %></p> -->
                     </div>
-                </div>
+                </button>
                 <!-- <hr /> -->
             <% }) %>
             <!-- </ul> -->
@@ -33,6 +34,6 @@
     </div>
 
 </body>
-
+<script src="../messagePopup.js"></script>
 
 <%- include('../partials/footer') %>

@@ -8,6 +8,11 @@
     padding: 0;
 }
 
+.topRelative {
+    position: relative;
+    width: 100vw;
+}
+
 .pacifico-regular {
     font-family: "Pacifico", cursive;
     font-weight: 400;
@@ -107,51 +112,82 @@ body {
 }
 
 .subBodyContainer {
-    /* width: auto; */
-    /* margin-top: 100px; */
     padding-top: 100px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.mainContainerDiv{
-    margin-left: 5%;
-    margin-right: 5%;
+.mainContainerDiv {
+    margin: 0 auto;
     margin-top: 1%;
     margin-bottom: 50px;
-    /* width: 100vw; */
     display: flex;
-    height: auto;
-    overflow: visible;
     flex-wrap: wrap;
-    /* width: 75vw; */
-    /* justify-content: space-around; */
+    /* width: fit-content; */
+    max-width: 86%;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-
-
-
-.messageDiv {
+.messageDivStatic {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.messageDiv {
     margin-top: 30px;
     margin-left: 10px;
     margin-right: 10px;
+    /* margin: 30px auto 0px 10px; */
     border-style: solid;
-    /* border-color: black; */
     border-radius: 10px;
     border-width: 1px;
     height: 300px;
     width: 250px;
     box-sizing: border-box;
-    /* box-shadow: 5px 5px black; */
     box-shadow: 6px 6px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s;
     transition: 0.3s;
-
     position: relative;
+}
+
+.messageDivExpanded {
+    top: 200px;
+    left: calc((100vw - 500px)/2);
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    height: 600px;
+    width: 500px;
+    box-sizing: border-box;
+    box-shadow: 12px 12px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s;
+    transition: 0.3s;
+    position: fixed;
+    font-size: 2em;
+    z-index: 10;
+}
+
+.messageDiv:hover{
+    transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.05, 1.05); /* IE 9 */
+    -webkit-transform: scale(1.1, 1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.messageDivExpanded:hover {
+    transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.05, 1.05); /* IE 9 */
+    -webkit-transform: scale(1.1, 1.1);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .messageBackgroundDiv {
@@ -176,21 +212,15 @@ body {
     top: 0;
     z-index: 1;
     border-radius: 10px;
-    padding: 10px;
+    padding: 4%;
     box-sizing: border-box;
 }
 
-.messageDiv:hover{
-    transform: scale(1.1, 1.1);
-    -ms-transform: scale(1.05, 1.05); /* IE 9 */
-    -webkit-transform: scale(1.1, 1.1);
-    transition: 0.3s;
-    cursor: pointer;
-}
+
 
 .messageTextContainer {
-    padding: 5px;
-    height: 61%;
+    padding: 2.2%;
+    height: 71%;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -214,8 +244,10 @@ body {
     /* color: white; */
     /* width: calc(100% - 5px); */
     display: -webkit-box;
-    -webkit-line-clamp: 9; /* Number of lines */
+    -webkit-line-clamp: 11; /* Number of lines */
     -webkit-box-orient: vertical;
+    font-size: 15px;
+    text-align: left;
 }
 
 .authorText {
@@ -226,7 +258,7 @@ body {
     box-sizing: border-box;
     padding: 5px;
     border-radius: 10px;
-    font-size: 20px
+    font-size: 1.5em;
 }
 
 .lightBackgroundTextDiv {
@@ -253,6 +285,9 @@ body {
     text-align: center;
     text-shadow: 0 0 5px white;
     color: black;
+    width: fit-content;
+    height: fit-content;
+    /* font-size: 1em; */
 }
 
 .notLightFromTextColor {
