@@ -80,11 +80,11 @@ h2 {
     transition: 0.2s;
 }
 
-/* .newSubmitButton:hover{
+.newSubmitButton:hover{
     cursor: pointer;
     background-color: rgb(189, 185, 185);
     transition: 0.3s;
-} */
+}
 
 .newSubmitButton:active {
     box-shadow: 0 4px #666;
@@ -119,13 +119,13 @@ h2 {
     cursor: pointer;
 }
 
-.smallPicture:focus {
-    /* border: solid red; */
-    /* box-sizing: border-box; */
-    /* margin-top: 0px; */
+/* .smallPicture:focus {
+    border: solid red;
+    box-sizing: border-box;
+    margin-top: 0px;
     transition: 0.3s;
     transform: scale(1.4, 1.4);
-}
+} */
 
 
 .selected {
