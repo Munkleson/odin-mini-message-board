@@ -102,11 +102,22 @@ h2 {
     margin-top: 50px;
 }
 
+.hiddenRadio {
+    display: none;
+}
+
+.customRadio {
+    position: relative;
+    display: inline-block;
+}
+
 .smallPicture {
+    display: inline-block;
     width: 70px;
     height: 70px;
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position: center;
     margin: 15px;
     /* border: solid 5px rgba(0,0,0,0); */
     /* box-sizing: content-box; */

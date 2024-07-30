@@ -1,3 +1,5 @@
+// import { currentActiveButton, buttonChangeEvent  } from '../public/newFunctions';
+
 const messages = [
     // {
     //   text: "Hi there!",
@@ -41,8 +43,9 @@ router.post('/new', (req, res) => {
   const messageUser = req.body.author;
   // const backgroundImageArray = req.body.backgroundImageArray;
 
-  let randomBackground = Math.floor(Math.random() * backgroundImageArray.length);
-  const backgroundImage = backgroundImageArray[randomBackground];
+  // let randomBackground = Math.floor(Math.random() * backgroundImageArray.length);
+  // const backgroundImage = backgroundImageArray[randomBackground];
+  const backgroundImage = req.body.backgroundImage;
   let lightnessCheck;
   let fromTextColor;
   let messageTextColor;

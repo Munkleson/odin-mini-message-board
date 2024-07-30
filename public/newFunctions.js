@@ -20,4 +20,3 @@ for (let index = 0; index < pictureButton.length; index++) {
 
 
 
-
