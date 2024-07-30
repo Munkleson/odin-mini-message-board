@@ -7,12 +7,18 @@ for (let index = 0; index < pictureButton.length; index++) {
         if (currentActiveButton !== target && currentActiveButton){
             currentActiveButton.classList.replace('smallPictureFocus', 'smallPictureNotFocus');
         }
-        currentActiveButton = target;
         if (target.classList.contains('smallPictureNotFocus')){
             target.classList.replace('smallPictureNotFocus', 'smallPictureFocus');
+            const checkBoxes = document.querySelectorAll('input[type="checkbox"][required]')
+            checkBoxes.forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.removeAttribute('required');
+            });
+            target.previousElementSibling.setAttribute('required', 'true');
         } else {
             target.classList.replace('smallPictureFocus', 'smallPictureNotFocus');
         }
+        currentActiveButton = target;
     });
 }
 

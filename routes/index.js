@@ -20,6 +20,7 @@ const backgroundImageArray = ["https://i.pinimg.com/originals/90/40/03/9040034f5
   "https://cdn.pixabay.com/photo/2024/03/15/18/53/magnolia-flower-8635583_640.jpg",
   "https://cdn.pixabay.com/photo/2022/09/01/04/40/anemone-7424709_640.jpg",
   "https://cdn.pixabay.com/photo/2023/03/26/07/27/flower-7877708_1280.jpg",
+  "https://cdn.pixabay.com/photo/2015/10/16/13/45/ranunculus-991215_1280.jpg",
 ];
 
 const lightBackgroundImageArray = ["https://cdn.pixabay.com/photo/2023/03/26/07/27/flower-7877708_1280.jpg",

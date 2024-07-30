@@ -18,18 +18,19 @@
         <div class="inputFormContainer">
             <h2>Is there something you would like to say to a special someone? <br>Would you like to confess your sins? <br>How about just letting loose on some of the frustrations you have had over your whole life?<br> Just let it all out!!!</h2>
             <form method="POST" action="/new" class="formDiv" id="newMessageForm">
-                <input type="text" name="author" placeholder="Your name/alias" class="newAuthor"><br>
+                <input type="text" name="author" placeholder="Your name/alias" class="newAuthor" maxlength="20" required><br>
                 <div class="newMessageDiv">
-                    <textarea type="text" name="content" placeholder="What would you like to say in your message? &#10; &#10; - No swearing please &#10; - Avoid using identifying information &#10; - Please do not spam (1 message per person) &#10; &#10; And remember, it doesn't have to be serious!! Life is more fun when you are sometimes silly 😄" class="newMessage"></textarea><br>
+                    <textarea type="text" name="content" placeholder="What would you like to say in your message? &#10; &#10; - No swearing please &#10; - Avoid using identifying information &#10; - Please do not spam (1 message per person) &#10; &#10; And remember, it doesn't have to be serious!! Life is more fun when you are sometimes silly 😄" class="newMessage" required></textarea><br>
                 </div>
 
                 <button name="clickButton" class="newSubmitButton">Post it!</button>
             </form>
         </div>
+        <p class="selectPictureTextInstruction">Please select a design below for your backdrop</p>
         <div class="pictureSelectDiv">
             <% backgroundImage.forEach(element => { %>
-                <label class="customRadio">
-                    <input form="newMessageForm" type="radio" name="backgroundImage" class="hiddenRadio" value="<%= element %>"></input>
+                <label class="customCheckbox">
+                    <input form="newMessageForm" type="checkbox" name="backgroundImage" class="hiddenCheckbox" value="<%= element %>" required></input>
                     <span class="smallPicture smallPictureNotFocus" style="background-image: url('<%= element %>')"></span>
                 </label>
             <% }) %>
