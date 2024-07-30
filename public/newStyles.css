@@ -127,6 +127,16 @@ h2 {
     transform: scale(1.4, 1.4);
 } */
 
+.smallPictureFocus {
+    transform: scale(1.4, 1.4);
+    box-shadow: 0 0 15px yellow;
+}
+
+.smallPictureNotFocus {
+    transform: scale(1, 1);
+    box-shadow: 0 0 0;
+}
+
 
 .selected {
 
