@@ -25,6 +25,8 @@
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 0 0 15px #e5ab42;
+    text-decoration: none;
+    color: black;
 }
 
 .header {
