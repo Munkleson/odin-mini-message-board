@@ -1,4 +1,5 @@
 const pictureButton = document.getElementsByClassName('smallPicture');
+const textAreaElement = document.querySelector('.newMessage');
 let currentActiveButton;
 
 for (let index = 0; index < pictureButton.length; index++) {
@@ -22,7 +23,19 @@ for (let index = 0; index < pictureButton.length; index++) {
     });
 }
 
+// textAreaElement.addEventListener('keypress', function(event) {
+//     if (event.key === 'Enter') {
+//         event.preventDefault();
+//         let textArea = this;
+//         let start = textArea.selectionStart;
+//         let end = textArea.selectionEnd;
 
+//         textArea.value = textArea.value.substring(0, start) + "\n" + textArea.value.substring(end);
+//         console.log(textArea.value);
+
+//         textArea.selectionStart = textArea.selectionEnd = start + 1;
+//     }
+// });
 
 
 

@@ -240,7 +240,7 @@ body {
     border-width: 0px;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .messageText {
@@ -255,6 +255,8 @@ body {
     -webkit-line-clamp: 11; /* Number of lines */
     -webkit-box-orient: vertical;
     font-size: 15px;
+
+    white-space: pre-wrap;
     text-align: left;
 }
 
